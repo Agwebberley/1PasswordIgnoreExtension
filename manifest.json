@@ -1,0 +1,17 @@
+{
+    "name": "1Password Ignore Extension",
+    "version": "2.2",
+    "description": "Ignores 1Password on specified domains",
+    "manifest_version": 3,
+    "permissions": ["storage", "tabs"],
+    
+    "options_ui": {
+      "page": "options.html"
+    },
+    "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "js": ["jquery.min.js", "content.js"],
+      "run_at": "document_idle"
+    }]
+  }
+  
